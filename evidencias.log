@@ -1,0 +1,148 @@
+Script started on 2026-08-27 17:25:45-03:00 [TERM="xterm-256color" TTY="/dev/pts/4" COLUMNS="176" LINES="13"]
+[?2004h]0;skickle@ROADLESS1: ~/OS/mandelbrot[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/mandelbrot[00m$ date
+[?2004lThu Aug 27 17:25:51 -03 2026
+[?2004h]0;skickle@ROADLESS1: ~/OS/mandelbrot[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/mandelbrot[00m$ pwd
+[?2004l/home/skickle/OS/mandelbrot
+[?2004h]0;skickle@ROADLESS1: ~/OS/mandelbrot[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/mandelbrot[00m$ whoami
+[?2004lskickle
+[?2004h]0;skickle@ROADLESS1: ~/OS/mandelbrot[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/mandelbrot[00m$ [K]0;skickle@ROADLESS1: ~/OS/mandelbrot[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/mandelbrot[00m$ [K]0;skickle@ROADLESS1: ~/OS/mandelbrot[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/mandelbrot[00m$ [K]0;skickle@ROADLESS1: ~/OS/mandelbrot[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/mandelbrot[00m$ [K]0;skickle@ROADLESS1: ~/OS/mandelbrot[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/mandelbrot[00m$ make
+[?2004lclang -Wall -Wextra -D_POSIX_C_SOURCE=200809L -o mandelbrot mandelbrot.c
+^[[3~[1mmandelbrot.c:14:28: [0m[0;1;31merror: [0m[1mincompatible pointer to integer conversion passing 'long *' to parameter of type 'int' [-Wint-conversion][0m
+   14 |     if (validaInt(argv[1], &largura) != 0) return 1;[0m
+      | [0;1;32m                           ^~~~~~~~
+[0m[1m./mandelbrot.h:4:34: [0m[0;1;36mnote: [0mpassing argument to parameter 'saida' here[0m
+    4 | int validaInt(const char *s, int saida);[0m
+      | [0;1;32m                                 ^
+[0m[1mmandelbrot.c:15:28: [0m[0;1;31merror: [0m[1mincompatible pointer to integer conversion passing 'long *' to parameter of type 'int' [-Wint-conversion][0m
+   15 |     if (validaInt(argv[2], &altura) != 0) return 1;[0m
+      | [0;1;32m                           ^~~~~~~
+[0m[1m./mandelbrot.h:4:34: [0m[0;1;36mnote: [0mpassing argument to parameter 'saida' here[0m
+    4 | int validaInt(const char *s, int saida);[0m
+      | [0;1;32m                                 ^
+[0m[1mmandelbrot.c:16:28: [0m[0;1;31merror: [0m[1mincompatible pointer to integer conversion passing 'long *' to parameter of type 'int' [-Wint-conversion][0m
+   16 |     if (validaInt(argv[3], &max_iteracoes) != 0) return 1;[0m
+      | [0;1;32m                           ^~~~~~~~~~~~~~
+[0m[1m./mandelbrot.h:4:34: [0m[0;1;36mnote: [0mpassing argument to parameter 'saida' here[0m
+    4 | int validaInt(const char *s, int saida);[0m
+      | [0;1;32m                                 ^
+[0m[1mmandelbrot.c:17:28: [0m[0;1;31merror: [0m[1mincompatible pointer to integer conversion passing 'long *' to parameter of type 'int' [-Wint-conversion][0m
+   17 |     if (validaInt(argv[4], &num_threads) != 0) return 1;[0m
+      | [0;1;32m                           ^~~~~~~~~~~~
+[0m[1m./mandelbrot.h:4:34: [0m[0;1;36mnote: [0mpassing argument to parameter 'saida' here[0m
+    4 | int validaInt(const char *s, int saida);[0m
+      | [0;1;32m                                 ^
+[0m[1mmandelbrot.c:21:5: [0m[0;1;31merror: [0m[1mconflicting types for 'validaInt'[0m
+   21 | int validaInt(const char *s, long *saida) {[0m
+      | [0;1;32m    ^
+[0m[1m./mandelbrot.h:4:5: [0m[0;1;36mnote: [0mprevious declaration is here[0m
+    4 | int validaInt(const char *s, int saida);[0m
+      | [0;1;32m    ^
+[0m5 errors generated.
+make: *** [Makefile:2: mandelbrot] Error 1
+[?2004h]0;skickle@ROADLESS1: ~/OS/mandelbrot[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/mandelbrot[00m$ make
+[?2004lclang -Wall -Wextra -D_POSIX_C_SOURCE=200809L -o mandelbrot mandelbrot.c
+[1mmandelbrot.c:14:28: [0m[0;1;31merror: [0m[1mincompatible pointer to integer conversion passing 'long *' to parameter of type 'long'; remove & [-Wint-conversion][0m
+   14 |     if (validaInt(argv[1], &largura) != 0) return 1;[0m
+      | [0;1;32m                           ^~~~~~~~
+[0m[1m./mandelbrot.h:4:35: [0m[0;1;36mnote: [0mpassing argument to parameter 'saida' here[0m
+    4 | int validaInt(const char *s, long saida);[0m
+      | [0;1;32m                                  ^
+[0m[1mmandelbrot.c:15:28: [0m[0;1;31merror: [0m[1mincompatible pointer to integer conversion passing 'long *' to parameter of type 'long'; remove & [-Wint-conversion][0m
+   15 |     if (validaInt(argv[2], &altura) != 0) return 1;[0m
+      | [0;1;32m                           ^~~~~~~
+[0m[1m./mandelbrot.h:4:35: [0m[0;1;36mnote: [0mpassing argument to parameter 'saida' here[0m
+    4 | int validaInt(const char *s, long saida);[0m
+      | [0;1;32m                                  ^
+[0m[1mmandelbrot.c:16:28: [0m[0;1;31merror: [0m[1mincompatible pointer to integer conversion passing 'long *' to parameter of type 'long'; remove & [-Wint-conversion][0m
+   16 |     if (validaInt(argv[3], &max_iteracoes) != 0) return 1;[0m
+      | [0;1;32m                           ^~~~~~~~~~~~~~
+[0m[1m./mandelbrot.h:4:35: [0m[0;1;36mnote: [0mpassing argument to parameter 'saida' here[0m
+    4 | int validaInt(const char *s, long saida);[0m
+      | [0;1;32m                                  ^
+[0m[1mmandelbrot.c:17:28: [0m[0;1;31merror: [0m[1mincompatible pointer to integer conversion passing 'long *' to parameter of type 'long'; remove & [-Wint-conversion][0m
+   17 |     if (validaInt(argv[4], &num_threads) != 0) return 1;[0m
+      | [0;1;32m                           ^~~~~~~~~~~~
+[0m[1m./mandelbrot.h:4:35: [0m[0;1;36mnote: [0mpassing argument to parameter 'saida' here[0m
+    4 | int validaInt(const char *s, long saida);[0m
+      | [0;1;32m                                  ^
+[0m[1mmandelbrot.c:21:5: [0m[0;1;31merror: [0m[1mconflicting types for 'validaInt'[0m
+   21 | int validaInt(const char *s, long *saida) {[0m
+      | [0;1;32m    ^
+[0m[1m./mandelbrot.h:4:5: [0m[0;1;36mnote: [0mprevious declaration is here[0m
+    4 | int validaInt(const char *s, long saida);[0m
+      | [0;1;32m    ^
+[0m5 errors generated.
+make: *** [Makefile:2: mandelbrot] Error 1
+[?2004h]0;skickle@ROADLESS1: ~/OS/mandelbrot[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/mandelbrot[00m$ make
+[?2004lclang -Wall -Wextra -D_POSIX_C_SOURCE=200809L -o mandelbrot mandelbrot.c
+[?2004h]0;skickle@ROADLESS1: ~/OS/mandelbrot[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/mandelbrot[00m$ [K]0;skickle@ROADLESS1: ~/OS/mandelbrot[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/mandelbrot[00m$ [K[7P]0;skickle@ROADLESS1: ~/OS/mandelbrot[01;32mskickle@ROADLESS1[00m:[01;34m~/OS
+/mandelbrot[00m
+$ [K[A[K[A[K[A[K]0;skickle@ROADLESS1: ~/OS/mandelbrot[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/mandelbrot[00m$ exit
+[?2004lexit
+
+Script done on 2026-08-28 10:43:54-03:00 [COMMAND_EXIT_CODE="0"]
+Script started on 2026-08-28 10:44:10-03:00 [TERM="xterm-256color" TTY="/dev/pts/6" COLUMNS="176" LINES="13"]
+[?2004h]0;skickle@ROADLESS1: ~/OS/mandelbrot[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/mandelbrot[00m$ [K]0;skickle@ROADLESS1: ~/OS/mandelbrot[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/mandelbrot[00m$ [K]0;skickle@ROADLESS1: ~/OS/mandelbrot[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/mandelbrot[00m$ [K]0;skickle@ROADLESS1: ~/OS/mandelbrot[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/mandelbrot[00m$ [K]0;skickle@ROADLESS1: ~/OS/mandelbrot[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/mandelbrot[00m$ [K]0;skickle@ROADLESS1: ~/OS/mandelbrot[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/mandelbrot[00m$ [K]0;skickle@ROADLESS1: ~/OS/mandelbrot[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/mandelbrot[00m$ [K]0;skickle@ROADLESS1: ~/OS/mandelbrot[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/mandelbrot[00m$ [K]0;skickle@ROADLESS1: ~/OS/mandelbrot[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/mandelbrot[00m$ [K]0;skickle@ROADLESS1: ~/OS/mandelbrot[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/mandelbrot[00m$ [K]0;skickle@ROADLESS1: ~/OS/mandelbrot[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/mandelbrot[00m$ [K]0;skickle@ROADLESS1: ~/OS/mandelbrot[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/mandelbrot[00m$ [K]0;skickle@ROADLESS1: ~/OS/mandelbrot[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/mandelbrot[00m$ [K]0;skickle@ROADLESS1: ~/OS/mandelbrot[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/mandelbrot[00m$ [K]0;skickle@ROADLESS1: ~/OS/mandelbrot[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/mandelbrot[00m$ [K]0;skickle@ROADLESS1: ~/OS/mandelbrot[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/mandelbrot[00m$ [K]0;skickle@ROADLESS1: ~/OS/mandelbrot[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/mandelbrot[00m$ [K]0;skickle@ROADLESS1: ~/OS/mandelbrot[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/mandelbrot[00m$ [K]0;skickle@ROADLESS1: ~/OS/mandelbrot[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/mandelbrot[00m$ [K]0;skickle@ROADLESS1: ~/OS/mandelbrot[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/mandelbrot[00m$ [K]0;skickle@ROADLESS1: ~/OS/mandelbrot[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/mandelbrot[00m$ [K]0;skickle@ROADLESS1: ~/OS/mandelbrot[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/mandelbrot[00m$ [K]0;skickle@ROADLESS1: ~/OS/mandelbrot[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/mandelbrot[00m$ [K]0;skickle@ROADLESS1: ~/OS/mandelbrot[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/mandelbrot[00m$ [K]0;skickle@ROADLESS1: ~/OS/mandelbrot[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/mandelbrot[00m$ [K]0;skickle@ROADLESS1: ~/OS/mandelbrot[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/mandelbrot[00m$ [K]0;skickle@ROADLESS1: ~/OS/mandelbrot[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/mandelbrot[00m$ [K]0;skickle@ROADLESS1: ~/OS/mandelbrot[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/mandelbrot[00m$ [K]0;skickle@ROADLESS1: ~/OS/mandelbrot[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/mandelbrot[00m$ [K]0;skickle@ROADLESS1: ~/OS/mandelbrot[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/mandelbrot[00m$ [K]0;skickle@ROADLESS1: ~/OS/mandelbrot[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/mandelbrot[00m$ [K]0;skickle@ROADLESS1: ~/OS/mandelbrot[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/mandelbrot[00m$ [K]0;skickle@ROADLESS1: ~/OS/mandelbrot[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/mandelbrot[00m$ [K]0;skickle@ROADLESS1: ~/OS/mandelbrot[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/mandelbrot[00m$ [K]0;skickle@ROADLESS1: ~/OS/mandelbrot[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/mandelbrot[00m$ [K]0;skickle@ROADLESS1: ~/OS/mandelbrot[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/mandelbrot[00m$ [K]0;skickle@ROADLESS1: ~/OS/mandelbrot[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/mandelbrot[00m$ [K]0;skickle@ROADLESS1: ~/OS/mandelbrot[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/mandelbrotScript started on 2026-08-28 11:04:03-03:00 [TERM="xterm-256color" TTY="/dev/pts/4" COLUMNS="177" LINES="13"]
+[?2004h]0;skickle@ROADLESS1: ~/OS/mandelbrot[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/mandelbrot[00m$ date
+[?2004lFri Aug 28 11:04:04 -03 2026
+[?2004h]0;skickle@ROADLESS1: ~/OS/mandelbrot[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/mandelbrot[00m$ pwid
+[?2004lCommand 'pwid' not found, did you mean:
+  command 'pwd' from deb coreutils (9.4-3ubuntu6.2)
+  command 'pwiz' from deb peewee (3.14.10+dfsg-1build3)
+Try: sudo apt install <deb name>
+[?2004h]0;skickle@ROADLESS1: ~/OS/mandelbrot[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/mandelbrot[00m$ pwd
+[?2004l/home/skickle/OS/mandelbrot
+[?2004h]0;skickle@ROADLESS1: ~/OS/mandelbrot[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/mandelbrot[00m$ whoami
+[?2004lskickle
+[?2004h]0;skickle@ROADLESS1: ~/OS/mandelbrot[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/mandelbrot[00m$ make
+[?2004lclang -Wall -Wextra -D_POSIX_C_SOURCE=200809L -o mandelbrot mandelbrot.c
+[1mmandelbrot.c:23:13: [0m[0;1;31merror: [0m[1mcall to undeclared function 'mapeia_pixel'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration][0m
+   23 |             mapeia_pixel(col, row, largura, altura, &cr, &ci);[0m
+      | [0;1;32m            ^
+[0m[1mmandelbrot.c:23:13: [0m[0;1;36mnote: [0mdid you mean 'mapearPixel'?[0m
+[1m./mandelbrot.h:5:6: [0m[0;1;36mnote: [0m'mapearPixel' declared here[0m
+    5 | void mapearPixel(int col, int row, long largura, long altura, double *cr, double *ci);[0m
+      | [0;1;32m     ^
+[0m[1mmandelbrot.c:24:22: [0m[0;1;31merror: [0m[1mcall to undeclared function 'conta_iteracoes'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration][0m
+   24 |             int it = conta_iteracoes(cr, ci, max_iteracoes);[0m
+      | [0;1;32m                     ^
+[0m[1mmandelbrot.c:24:22: [0m[0;1;36mnote: [0mdid you mean 'contarIteracoes'?[0m
+[1m./mandelbrot.h:6:5: [0m[0;1;36mnote: [0m'contarIteracoes' declared here[0m
+    6 | int contarIteracoes(double cr, double ci, long max_iteracoes);[0m
+      | [0;1;32m    ^
+[0m2 errors generated.
+make: *** [Makefile:2: mandelbrot] Error 1
+[?2004h]0;skickle@ROADLESS1: ~/OS/mandelbrot[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/mandelbrot[00m$ MNA[K[K[Kmake
+[?2004lclang -Wall -Wextra -D_POSIX_C_SOURCE=200809L -o mandelbrot mandelbrot.c
+[1mmandelbrot.c:23:13: [0m[0;1;31merror: [0m[1mcall to undeclared function 'mapeiaPixel'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration][0m
+   23 |             mapeiaPixel(col, row, largura, altura, &cr, &ci);[0m
+      | [0;1;32m            ^
+[0m[1mmandelbrot.c:23:13: [0m[0;1;36mnote: [0mdid you mean 'mapearPixel'?[0m
+[1m./mandelbrot.h:5:6: [0m[0;1;36mnote: [0m'mapearPixel' declared here[0m
+    5 | void mapearPixel(int col, int row, long largura, long altura, double *cr, double *ci);[0m
+      | [0;1;32m     ^
+[0m[1mmandelbrot.c:24:22: [0m[0;1;31merror: [0m[1mcall to undeclared function 'contaIteracoes'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration][0m
+   24 |             int it = contaIteracoes(cr, ci, max_iteracoes);[0m
+      | [0;1;32m                     ^
+[0m[1mmandelbrot.c:24:22: [0m[0;1;36mnote: [0mdid you mean 'contarIteracoes'?[0m
+[1m./mandelbrot.h:6:5: [0m[0;1;36mnote: [0m'contarIteracoes' declared here[0m
+    6 | int contarIteracoes(double cr, double ci, long max_iteracoes);[0m
+      | [0;1;32m    ^
+[0m2 errors generated.
+make: *** [Makefile:2: mandelbrot] Error 1
+[?2004h]0;skickle@ROADLESS1: ~/OS/mandelbrot[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/mandelbrot[00m$ make
+[?2004lclang -Wall -Wextra -D_POSIX_C_SOURCE=200809L -o mandelbrot mandelbrot.c
+[?2004h]0;skickle@ROADLESS1: ~/OS/mandelbrot[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/mandelbrot[00m$ ./mandelbrot 3 3 100 1
+[?2004lpixel(0,0) c=(-2.00,1.50) it=1
+pixel(1,0) c=(-0.50,1.50) it=2
+pixel(2,0) c=(1.00,1.50) it=2
+pixel(0,1) c=(-2.00,0.00) it=100
+pixel(1,1) c=(-0.50,0.00) it=100
+pixel(2,1) c=(1.00,0.00) it=3
+pixel(0,2) c=(-2.00,-1.50) it=1
+pixel(1,2) c=(-0.50,-1.50) it=2
+pixel(2,2) c=(1.00,-1.50) it=2
+[?2004h]0;skickle@ROADLESS1: ~/OS/mandelbrot[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/mandelbrot[00m$ exit
+[?2004lexit
+
+Script done on 2026-08-28 11:07:43-03:00 [COMMAND_EXIT_CODE="0"]

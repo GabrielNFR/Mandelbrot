@@ -1,0 +1,7 @@
+*.pf
+mandelbrot
+*.o
+*.md
+!README.md
+*.png
+*.txt
