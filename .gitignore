@@ -5,3 +5,4 @@ mandelbrot
 !README.md
 *.png
 *.txt
+*.pgm

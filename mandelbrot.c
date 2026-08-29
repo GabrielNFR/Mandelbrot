@@ -16,16 +16,45 @@ int main(int argc, char **argv) {
     if (validaInt(argv[3], &max_iteracoes) != 0) return 1;
     if (validaInt(argv[4], &num_threads) != 0) return 1;
 
+    unsigned char *buffer = (unsigned char*)malloc(largura * altura * sizeof(unsigned char));
+    if (buffer == NULL) {
+        fprintf(stderr, "Erro: alocação de memória falhou\n");
+        return 1;
+    }
 
-    for (int row = 0; row < altura; row++) {
-        for (int col = 0; col < largura; col++) {
+    FILE *f = fopen("mandelbrot_gnfr_serial.pgm", "w");
+    if (f == NULL) {
+        fprintf(stderr, "Erro: falha ao criar arquivo de saida\n");
+        return 1;
+    }
+
+    for (int i = 0; i < altura; i++) {
+        for (int j = 0; j < largura; j++) {
             double cr, ci;
-            mapearPixel(col, row, largura, altura, &cr, &ci);
-            int it = contarIteracoes(cr, ci, max_iteracoes);
-            fprintf(stderr, "pixel(%d,%d) c=(%.2f,%.2f) it=%d\n",
-                    col, row, cr, ci, it);
+            mapearPixel(j, i, largura, altura, &cr, &ci);
+            int iter = contarIteracoes(cr, ci, max_iteracoes);
+            int intensidade = (iter * 255) / max_iteracoes;
+            buffer[i * largura + j] = intensidade;
         }
     }
+
+    for (int i = 0; i < altura; i++) {
+        for (int j = 0; j < largura; j++) {
+            fprintf(f, "%d", buffer[i * largura + j]);
+            if (j + 1 < largura) {
+                fprintf(f, " ");
+            }
+        }
+        fprintf(f, "\n");
+    }
+
+    if (fclose(f) != 0) {
+        fprintf(stderr, "Erro: falha ao fechar o arquivo de saida\n");
+        free(buffer);
+        return 1;
+    }
+
+    free(buffer);
 
     return 0;
 }
