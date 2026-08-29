@@ -170,3 +170,104 @@ sudo apt install imagemagick-6.q16hdri              # version 8:6.9.11.60+dfsg-1
 [?2004lexit
 
 Script done on 2026-08-28 19:17:30-03:00 [COMMAND_EXIT_CODE="0"]
+Script started on 2026-08-29 17:18:00-03:00 [TERM="xterm-256color" TTY="/dev/pts/7" COLUMNS="177" LINES="13"]
+[?2004h]0;skickle@ROADLESS1: ~/OS/mandelbrot[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/mandelbrot[00m$ [K]0;skickle@ROADLESS1: ~/OS/mandelbrot[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/mandelbrot[00m$ [K]0;skickle@ROADLESS1: ~/OS/mandelbrot[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/mandelbrot[00m$ [K]0;skickle@ROADLESS1: ~/OS/mandelbrot[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/mandelbrot[00m$ make
+[?2004lclang -Wall -Wextra -D_POSIX_C_SOURCE=199309L -o mandelbrot mandelbrot.c
+[1mmandelbrot.c:32:21: [0m[0;1;35mwarning: [0m[1munused variable 'ini' [-Wunused-variable][0m
+   32 |     struct timespec ini, fim;[0m
+      | [0;1;32m                    ^~~
+[0m[1mmandelbrot.c:32:26: [0m[0;1;35mwarning: [0m[1munused variable 'fim' [-Wunused-variable][0m
+   32 |     struct timespec ini, fim;[0m
+      | [0;1;32m                         ^~~
+[0m2 warnings generated.
+[?2004h]0;skickle@ROADLESS1: ~/OS/mandelbrot[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/mandelbrot[00m$ make
+[?2004lclang -Wall -Wextra -D_POSIX_C_SOURCE=199309L -o mandelbrot mandelbrot.c
+[?2004h]0;skickle@ROADLESS1: ~/OS/mandelbrot[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/mandelbrot[00m$ make fclea[K[K[K[K[Kclean
+[?2004lMakefile:2: *** missing separator.  Stop.
+[?2004h]0;skickle@ROADLESS1: ~/OS/mandelbrot[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/mandelbrot[00m$ make[K[K[K[Kmake
+[?2004lMakefile:2: *** missing separator.  Stop.
+[?2004h]0;skickle@ROADLESS1: ~/OS/mandelbrot[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/mandelbrot[00m$ make
+[?2004lclang -Wall -Wextra -D_POSIX_C_SOURCE=200809L -o mandelbrot mandelbrot.c
+[?2004h]0;skickle@ROADLESS1: ~/OS/mandelbrot[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/mandelbrot[00m$ make
+[?2004lclang -Wall -Wextra -D_POSIX_C_SOURCE=200809L -o mandelbrot mandelbrot.c
+[1mmandelbrot.c:32:26: [0m[0;1;35mwarning: [0m[1munused variable 'fim' [-Wunused-variable][0m
+   32 |     struct timespec ini, fim;[0m
+      | [0;1;32m                         ^~~
+[0m1 warning generated.
+[?2004h]0;skickle@ROADLESS1: ~/OS/mandelbrot[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/mandelbrot[00m$ make clç[Kean
+[?2004lrm -f mandelbrot
+[?2004h]0;skickle@ROADLESS1: ~/OS/mandelbrot[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/mandelbrot[00m$ make
+[?2004lclang -Wall -Wextra -D_POSIX_C_SOURCE=200809L -o mandelbrot mandelbrot.c -lrt
+[1mmandelbrot.c:32:21: [0m[0;1;35mwarning: [0m[1munused variable 'ini' [-Wunused-variable][0m
+   32 |     struct timespec ini, fim;[0m
+      | [0;1;32m                    ^~~
+[0m[1mmandelbrot.c:32:26: [0m[0;1;35mwarning: [0m[1munused variable 'fim' [-Wunused-variable][0m
+   32 |     struct timespec ini, fim;[0m
+      | [0;1;32m                         ^~~
+[0m2 warnings generated.
+[?2004h]0;skickle@ROADLESS1: ~/OS/mandelbrot[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/mandelbrot[00m$ make
+[?2004lclang -Wall -Wextra -D_POSIX_C_SOURCE=200809L -o mandelbrot mandelbrot.c -lrt
+[?2004h]0;skickle@ROADLESS1: ~/OS/mandelbrot[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/mandelbrot[00m$ make clçea[K[K[Kean
+[?2004lrm -f mandelbrot
+[?2004h]0;skickle@ROADLESS1: ~/OS/mandelbrot[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/mandelbrot[00m$ make clean[K
+[?2004lclang -Wall -Wextra -D_POSIX_C_SOURCE=200809L -o mandelbrot mandelbrot.c -lrt
+[?2004h]0;skickle@ROADLESS1: ~/OS/mandelbrot[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/mandelbrot[00m$ make
+[?2004lclang -Wall -Wextra -D_POSIX_C_SOURCE=200809L -o mandelbrot mandelbrot.c -lrt
+[1mmandelbrot.c:1:9: [0m[0;1;35mwarning: [0m[1m'_POSIX_C_SOURCE' macro redefined [-Wmacro-redefined][0m
+    1 | #define _POSIX_C_SOURCE 199309L[0m
+      | [0;1;32m        ^
+[0m[1m<command line>:1:9: [0m[0;1;36mnote: [0mprevious definition is here[0m
+    1 | #define _POSIX_C_SOURCE 200809L[0m
+      | [0;1;32m        ^
+[0m1 warning generated.
+[?2004h]0;skickle@ROADLESS1: ~/OS/mandelbrot[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/mandelbrot[00m$ make
+[?2004lmake: 'mandelbrot' is up to date.
+[?2004h]0;skickle@ROADLESS1: ~/OS/mandelbrot[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/mandelbrot[00m$ make clean
+[?2004lrm -f mandelbrot
+[?2004h]0;skickle@ROADLESS1: ~/OS/mandelbrot[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/mandelbrot[00m$ make
+[?2004lclang -Wall -Wextra -o mandelbrot mandelbrot.c -lrt
+[?2004h]0;skickle@ROADLESS1: ~/OS/mandelbrot[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/mandelbrot[00m$ ./mandelbrot 3 3 100 1
+[?2004l[?2004h]0;skickle@ROADLESS1: ~/OS/mandelbrot[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/mandelbrot[00m$ ./mandelbrot 600 400 256 1
+[?2004l[?2004h]0;skickle@ROADLESS1: ~/OS/mandelbrot[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/mandelbrot[00m$ make
+[?2004lclang -Wall -Wextra -o mandelbrot mandelbrot.c -lrt
+[?2004h]0;skickle@ROADLESS1: ~/OS/mandelbrot[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/mandelbrot[00m$ make cçlea[K[K[K[Klean
+[?2004lrm -f mandelbrot
+[?2004h]0;skickle@ROADLESS1: ~/OS/mandelbrot[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/mandelbrot[00m$ make
+[?2004lclang -Wall -Wextra -o mandelbrot mandelbrot.c -lrt -fopenmp
+[1mmandelbrot.c:137:36: [0m[0;1;35mwarning: [0m[1munused parameter 'buffer' [-Wunused-parameter][0m
+  137 | void calcularOpenMP(unsigned char *buffer, long largura, long altura, long max_iteracoes, long num_threads) {[0m
+      | [0;1;32m                                   ^
+[0m[1mmandelbrot.c:137:49: [0m[0;1;35mwarning: [0m[1munused parameter 'largura' [-Wunused-parameter][0m
+  137 | void calcularOpenMP(unsigned char *buffer, long largura, long altura, long max_iteracoes, long num_threads) {[0m
+      | [0;1;32m                                                ^
+[0m[1mmandelbrot.c:137:63: [0m[0;1;35mwarning: [0m[1munused parameter 'altura' [-Wunused-parameter][0m
+  137 | void calcularOpenMP(unsigned char *buffer, long largura, long altura, long max_iteracoes, long num_threads) {[0m
+      | [0;1;32m                                                              ^
+[0m[1mmandelbrot.c:137:76: [0m[0;1;35mwarning: [0m[1munused parameter 'max_iteracoes' [-Wunused-parameter][0m
+  137 | void calcularOpenMP(unsigned char *buffer, long largura, long altura, long max_iteracoes, long num_threads) {[0m
+      | [0;1;32m                                                                           ^
+[0m[1mmandelbrot.c:137:96: [0m[0;1;35mwarning: [0m[1munused parameter 'num_threads' [-Wunused-parameter][0m
+  137 | void calcularOpenMP(unsigned char *buffer, long largura, long altura, long max_iteracoes, long num_threads) {[0m
+      | [0;1;32m                                                                                               ^
+[0m5 warnings generated.
+/usr/bin/ld: cannot find -lomp: No such file or directory
+clang: [0;1;31merror: [0m[1mlinker command failed with exit code 1 (use -v to see invocation)[0m
+make: *** [Makefile:2: mandelbrot] Error 1
+[?2004h]0;skickle@ROADLESS1: ~/OS/mandelbrot[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/mandelbrot[00m$ make
+[?2004lclang -Wall -Wextra -o mandelbrot mandelbrot.c -lrt -fopenmp
+[1mmandelbrot.c:5:10: [0m[0;1;31mfatal error: [0m[1m'omp.h' file not found[0m
+    5 | #include <omp.h>[0m
+      | [0;1;32m         ^~~~~~~
+[0m1 error generated.
+make: *** [Makefile:2: mandelbrot] Error 1
+[?2004h]0;skickle@ROADLESS1: ~/OS/mandelbrot[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/mandelbrot[00m$ [K]0;skickle@ROADLESS1: ~/OS/mandelbrot[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/mandelbrot[00m$ [K]0;skickle@ROADLESS1: ~/OS/mandelbrot[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/mandelbrot[00m$ [K]0;skickle@ROADLESS1: ~/OS/mandelbrot[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/mandelbrot[00m$ [K]0;skickle@ROADLESS1: ~/OS/mandelbrot[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/mandelbrot[00m$ [K]0;skickle@ROADLESS1: ~/OS/mandelbrot[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/mandelbrot[00m$ [K]0;skickle@ROADLESS1: ~/OS/mandelbrot[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/mandelbrot[00m$ [K]0;skickle@ROADLESS1: ~/OS/mandelbrot[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/mandelbrot[00m$ [K]0;skickle@ROADLESS1: ~/OS/mandelbrot[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/mandelbrot[00m$ [K]0;skickle@ROADLESS1: ~/OS/mandelbrot[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/mandelbrot[00m$ [K]0;skickle@ROADLESS1: ~/OS/mandelbrot[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/mandelbrot[00m$ [K]0;skickle@ROADLESS1: ~/OS/mandelbrot[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/mandelbrot[00m$ make
+[?2004lmake: 'mandelbrot' is up to date.
+[?2004h]0;skickle@ROADLESS1: ~/OS/mandelbrot[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/mandelbrot[00m$ make clean
+[?2004lrm -f mandelbrot
+[?2004h]0;skickle@ROADLESS1: ~/OS/mandelbrot[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/mandelbrot[00m$ make
+[?2004lclang -Wall -Wextra -o mandelbrot mandelbrot.c -lrt -fopenmp
+[?2004h]0;skickle@ROADLESS1: ~/OS/mandelbrot[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/mandelbrot[00m$ ./mandelbrot.[K 600 400 256 4
+[?2004l[?2004h]0;skickle@ROADLESS1: ~/OS/mandelbrot[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/mandelbrot[00m$ exit
+[?2004lexit
+
+Script done on 2026-08-29 18:06:23-03:00 [COMMAND_EXIT_CODE="0"]
