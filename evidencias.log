@@ -146,3 +146,27 @@ pixel(2,2) c=(1.00,-1.50) it=2
 [?2004lexit
 
 Script done on 2026-08-28 11:07:43-03:00 [COMMAND_EXIT_CODE="0"]
+Script started on 2026-08-28 16:19:03-03:00 [TERM="xterm-256color" TTY="/dev/pts/4" COLUMNS="177" LINES="13"]
+[?2004h]0;skickle@ROADLESS1: ~/OS/mandelbrot[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/mandelbrot[00m$ [K]0;skickle@ROADLESS1: ~/OS/mandelbrot[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/mandelbrot[00m$ [K]0;skickle@ROADLESS1: ~/OS/mandelbrot[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/mandelbrot[00m$ [K]0;skickle@ROADLESS1: ~/OS/mandelbrot[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/mandelbrot[00m$ make
+[?2004lclang -Wall -Wextra -D_POSIX_C_SOURCE=200809L -o mandelbrot mandelbrot.c
+[?2004h]0;skickle@ROADLESS1: ~/OS/mandelbrot[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/mandelbrot[00m$ make
+[?2004lclang -Wall -Wextra -D_POSIX_C_SOURCE=200809L -o mandelbrot mandelbrot.c
+[?2004h]0;skickle@ROADLESS1: ~/OS/mandelbrot[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/mandelbrot[00m$ ./mandelbrot 3 3 100 1
+[?2004l[?2004h]0;skickle@ROADLESS1: ~/OS/mandelbrot[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/mandelbrot[00m$ ./mandelbrot 600 400 256 1
+[?2004l[?2004h]0;skickle@ROADLESS1: ~/OS/mandelbrot[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/mandelbrot[00m$ [7m{ echo "P2"; echo "600 400"; echo "255"; cat mandelbrot_gnfr_serial.pgm; } > /tmp/ver.pgm[27m
+[7mconvert /tmp/ver.pgm /tmp/ver.png    # se tiver ImageMagick[27m[A{ echo "P2"; echo "600 400"; echo "255"; cat mandelbrot_gnfr_serial.pgm; } > /tmp/ver.pgm
+convert /tmp/ver.pgm /tmp/ver.png    # se tiver ImageMagick
+[?2004lCommand 'convert' not found, but can be installed with:
+sudo apt install graphicsmagick-imagemagick-compat  # version 1.4+really1.3.42-1, or
+sudo apt install imagemagick-6.q16                  # version 8:6.9.11.60+dfsg-1.6ubuntu1
+sudo apt install imagemagick-6.q16hdri              # version 8:6.9.11.60+dfsg-1.6ubuntu1
+[?2004h]0;skickle@ROADLESS1: ~/OS/mandelbrot[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/mandelbrot[00m$ date
+[?2004lFri Aug 28 16:59:28 -03 2026
+[?2004h]0;skickle@ROADLESS1: ~/OS/mandelbrot[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/mandelbrot[00m$ pwd
+[?2004l/home/skickle/OS/mandelbrot
+[?2004h]0;skickle@ROADLESS1: ~/OS/mandelbrot[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/mandelbrot[00m$ who0ami[K[K[K[Kami
+[?2004lskickle
+[?2004h]0;skickle@ROADLESS1: ~/OS/mandelbrot[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/mandelbrot[00m$ exiyt[K[Kt
+[?2004lexit
+
+Script done on 2026-08-28 19:17:30-03:00 [COMMAND_EXIT_CODE="0"]
