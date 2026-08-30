@@ -271,3 +271,86 @@ make: *** [Makefile:2: mandelbrot] Error 1
 [?2004lexit
 
 Script done on 2026-08-29 18:06:23-03:00 [COMMAND_EXIT_CODE="0"]
+Script started on 2026-08-30 14:04:13-03:00 [TERM="xterm-256color" TTY="/dev/pts/6" COLUMNS="161" LINES="13"]
+[?2004h]0;skickle@ROADLESS1: ~/OS/mandelbrot[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/mandelbrot[00m$ [K]0;skickle@ROADLESS1: ~/OS/mandelbrot[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/mandelbrot[00m$ [K]0;skickle@ROADLESS1: ~/OS/mandelbrot[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/mandelbrot[00m$ [K]0;skickle@ROADLESS1: ~/OS/mandelbrot[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/mandelbrot[00m$ [K]0;skickle@ROADLESS1: ~/OS/mandelbrot[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/mandelbrot[00m$ [K]0;skickle@ROADLESS1: ~/OS/mandelbrot[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/mandelbrot[00m$ [K]0;skickle@ROADLESS1: ~/OS/mandelbrot[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/mandelbrot[00m$ [K]0;skickle@ROADLESS1: ~/OS/mandelbrot[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/mandelbrot[00m$ [K]0;skickle@ROADLESS1: ~/OS/mandelbrot[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/mandelbrot[00m$ [K]0;skickle@ROADLESS1: ~/OS/mandelbrot[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/mandelbrot[00m$ [K]0;skickle@ROADLESS1: ~/OS/mandelbrot[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/mandelbrot[00m$ [K]0;skickle@ROADLESS1: ~/OS/mandelbrot[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/mandelbrot[00m$ [K]0;skickle@ROADLESS1: ~/OS/mandelbrot[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/mandelbrot[00m$ [K]0;skickle@ROADLESS1: ~/OS/mandelbrot[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/mandelbrot[00m$ [K]0;skickle@ROADLESS1: ~/OS/mandelbrot[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/mandelbrot[00m$ [K]0;skickle@ROADLESS1: ~/OS/mandelbrot[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/mandelbrot[00m$ [K]0;skickle@ROADLESS1: ~/OS/mandelbrot[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/mandelbrot[00m$ [K]0;skickle@ROADLESS1: ~/OS/mandelbrot[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/mandelbrot[00m$ [K]0;skickle@ROADLESS1: ~/OS/mandelbrot[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/mandelbrot[00m$ [K]0;skickle@ROADLESS1: ~/OS/mandelbrot[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/mandelbrot[00m$ [K]0;skickle@ROADLESS1: ~/OS/mandelbrot[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/mandelbrot[00m$ date
+[?2004lSun Aug 30 14:27:16 -03 2026
+[?2004h]0;skickle@ROADLESS1: ~/OS/mandelbrot[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/mandelbrot[00m$ pwd
+[?2004l/home/skickle/OS/mandelbrot
+[?2004h]0;skickle@ROADLESS1: ~/OS/mandelbrot[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/mandelbrot[00m$ whoami
+[?2004lskickle
+[?2004h]0;skickle@ROADLESS1: ~/OS/mandelbrot[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/mandelbrot[00m$ make
+[?2004lclang -Wall -Wextra -o mandelbrot mandelbrot.c -lrt -fopenmp -pthreads
+[1mmandelbrot.c:204:13: [0m[0;1;31merror: [0m[1mvoid function 'calcularPthreads1' should not return a value [-Wreturn-type][0m
+  204 |             return 1;[0m
+      | [0;1;32m            ^      ~
+[0m[1mmandelbrot.c:211:13: [0m[0;1;31merror: [0m[1mvoid function 'calcularPthreads1' should not return a value [-Wreturn-type][0m
+  211 |             return 1;[0m
+      | [0;1;32m            ^      ~
+[0m[1mmandelbrot.c:214:5: [0m[0;1;31merror: [0m[1mvoid function 'calcularPthreads1' should not return a value [-Wreturn-type][0m
+  214 |     return 0;[0m
+      | [0;1;32m    ^      ~
+[0m[1mmandelbrot.c:231:13: [0m[0;1;31merror: [0m[1mvoid function 'calcularPthreads2' should not return a value [-Wreturn-type][0m
+  231 |             return 1;[0m
+      | [0;1;32m            ^      ~
+[0m[1mmandelbrot.c:238:13: [0m[0;1;31merror: [0m[1mvoid function 'calcularPthreads2' should not return a value [-Wreturn-type][0m
+  238 |             return 1;[0m
+      | [0;1;32m            ^      ~
+[0m[1mmandelbrot.c:241:5: [0m[0;1;31merror: [0m[1mvoid function 'calcularPthreads2' should not return a value [-Wreturn-type][0m
+  241 |     return 0;[0m
+      | [0;1;32m    ^      ~
+[0m6 errors generated.
+make: *** [Makefile:2: mandelbrot] Error 1
+[?2004h]0;skickle@ROADLESS1: ~/OS/mandelbrot[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/mandelbrot[00m$ make
+[?2004lclang -Wall -Wextra -o mandelbrot mandelbrot.c -lrt -fopenmp -pthreads
+[1mmandelbrot.c:204:13: [0m[0;1;31merror: [0m[1mvoid function 'calcularPthreads1' should not return a value [-Wreturn-type][0m
+  204 |             return 1;[0m
+      | [0;1;32m            ^      ~
+[0m[1mmandelbrot.c:211:13: [0m[0;1;31merror: [0m[1mvoid function 'calcularPthreads1' should not return a value [-Wreturn-type][0m
+  211 |             return 1;[0m
+      | [0;1;32m            ^      ~
+[0m[1mmandelbrot.c:230:13: [0m[0;1;31merror: [0m[1mvoid function 'calcularPthreads2' should not return a value [-Wreturn-type][0m
+  230 |             return 1;[0m
+      | [0;1;32m            ^      ~
+[0m[1mmandelbrot.c:237:13: [0m[0;1;31merror: [0m[1mvoid function 'calcularPthreads2' should not return a value [-Wreturn-type][0m
+  237 |             return 1;[0m
+      | [0;1;32m            ^      ~
+[0m4 errors generated.
+make: *** [Makefile:2: mandelbrot] Error 1
+[?2004h]0;skickle@ROADLESS1: ~/OS/mandelbrot[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/mandelbrot[00m$ make
+[?2004lclang -Wall -Wextra -o mandelbrot mandelbrot.c -lrt -fopenmp -pthreads
+[?2004h]0;skickle@ROADLESS1: ~/OS/mandelbrot[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/mandelbrot[00m$ ./mandelbrot 600 400 256 4
+[?2004l[?2004h]0;skickle@ROADLESS1: ~/OS/mandelbrot[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/mandelbrot[00m$ [7mcmp mandelbrot_gnfr_serial.pgm mandelbrot_gnfr_openmp.pgm[27m
+[7mcmp mandelbrot_gnfr_serial.pgm mandelbrot_gnfr_pthreads1.pgm[27m
+[7mcmp mandelbrot_gnfr_serial.pgm mandelbrot_gnfr_pthreads2.pgm[27m[A[Acmp mandelbrot_gnfr_serial.pgm mandelbrot_gnfr_openmp.pgm
+cmp mandelbrot_gnfr_serial.pgm mandelbrot_gnfr_pthreads1.pgm
+cmp mandelbrot_gnfr_serial.pgm mandelbrot_gnfr_pthreads2.pgm
+[?2004l[?2004h]0;skickle@ROADLESS1: ~/OS/mandelbrot[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/mandelbrot[00m$ [K]0;skickle@ROADLESS1: ~/OS/mandelbrot[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/mandelbrot[00m$ [K]0;skickle@ROADLESS1: ~/OS/mandelbrot[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/mandelbrot[00m$ [K]0;skickle@ROADLESS1: ~/OS/mandelbrot[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/mandelbrot[00m$ exit
+[?2004lexit
+
+Script done on 2026-08-30 15:50:23-03:00 [COMMAND_EXIT_CODE="0"]
+Script started on 2026-08-30 15:53:13-03:00 [TERM="xterm-256color" TTY="/dev/pts/5" COLUMNS="167" LINES="13"]
+[?2004h]0;skickle@ROADLESS1: ~/OS/mandelbrot[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/mandelbrot[00m$ [7m./mandelbrot [27m./mandelbrot 
+[?2004lUso: mandelbrot <largura> <altura> <max_iteracoes> <num_threads>
+[?2004h]0;skickle@ROADLESS1: ~/OS/mandelbrot[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/mandelbrot[00m$ ./[7m./mandelbrot 100 100 100[27m./mandelbrot 100 100 100
+[?2004lUso: mandelbrot <largura> <altura> <max_iteracoes> <num_threads>
+[?2004h]0;skickle@ROADLESS1: ~/OS/mandelbrot[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/mandelbrot[00m$ [7m./mandelbrot 0 100 100 4 [27m./mandelbrot 0 100 100 4 
+[?2004lErro: um ou mais argumentos não são números inteiros positivos
+[?2004h]0;skickle@ROADLESS1: ~/OS/mandelbrot[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/mandelbrot[00m$ [7m./mandelbrot -5 100 100 4 [27m./mandelbrot -5 100 100 4 
+[?2004lErro: um ou mais argumentos não são números inteiros positivos
+[?2004h]0;skickle@ROADLESS1: ~/OS/mandelbrot[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/mandelbrot[00m$ [7m./mandelbrot 100 100 abc 4 [27m./mandelbrot 100 100 abc 4 
+[?2004lErro: um ou mais argumentos não são números inteiros positivos
+[?2004h]0;skickle@ROADLESS1: ~/OS/mandelbrot[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/mandelbrot[00m$ [7m./mandelbrot 100 100 100 0  [27m./mandelbrot 100 100 100 0  
+[?2004lErro: um ou mais argumentos não são números inteiros positivos
+[?2004h]0;skickle@ROADLESS1: ~/OS/mandelbrot[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/mandelbrot[00m$ exit
+[?2004lexit
+
+Script done on 2026-08-30 15:53:47-03:00 [COMMAND_EXIT_CODE="1"]
+Script started on 2026-08-30 15:54:28-03:00 [TERM="xterm-256color" TTY="/dev/pts/5" COLUMNS="167" LINES="13"]
+[?2004h]0;skickle@ROADLESS1: ~/OS/mandelbrot[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/mandelbrot[00m$ [7m./mandelbrot 1 1 100 1[27m./mandelbrot 1 1 100 1
+[?2004l[?2004h]0;skickle@ROADLESS1: ~/OS/mandelbrot[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/mandelbrot[00m$ [7m./mandelbrot 3 3 1 1 [27m./mandelbrot 3 3 1 1 
+[?2004l[?2004h]0;skickle@ROADLESS1: ~/OS/mandelbrot[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/mandelbrot[00m$ [7m./mandelbrot 10 5 100 8[27m./mandelbrot 10 5 100 8
+[?2004l[?2004h]0;skickle@ROADLESS1: ~/OS/mandelbrot[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/mandelbrot[00m$ [7m./mandelbrot 3 3 100 1  [27m./mandelbrot 3 3 100 1  
+[?2004l[?2004h]0;skickle@ROADLESS1: ~/OS/mandelbrot[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/mandelbrot[00m$ exit
+[?2004lexit
+
+Script done on 2026-08-30 15:55:34-03:00 [COMMAND_EXIT_CODE="0"]

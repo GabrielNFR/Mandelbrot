@@ -3,6 +3,7 @@
 #include <errno.h>
 #include <stdlib.h>
 #include <omp.h>
+#include <pthread.h>
 #include <time.h>
 
 #include "mandelbrot.h"
@@ -47,6 +48,26 @@ int main(int argc, char **argv) {
         return 1;
     }
 
+    clock_gettime(CLOCK_MONOTONIC, &ini);
+    calcularPthreads1(buffer, largura, altura, max_iteracoes, num_threads);
+    clock_gettime(CLOCK_MONOTONIC, &fim);
+    double tempo_pthreads1 = (fim.tv_sec - ini.tv_sec) + (fim.tv_nsec - ini.tv_nsec) / 1e9;
+
+    if (escreverPGM("mandelbrot_gnfr_pthreads1.pgm", buffer, largura, altura) != 0) {
+        free(buffer);
+        return 1;
+    }
+
+    clock_gettime(CLOCK_MONOTONIC, &ini);
+    calcularPthreads2(buffer, largura, altura, max_iteracoes, num_threads);
+    clock_gettime(CLOCK_MONOTONIC, &fim);
+    double tempo_pthreads2 = (fim.tv_sec - ini.tv_sec) + (fim.tv_nsec - ini.tv_nsec) / 1e9;
+
+    if (escreverPGM("mandelbrot_gnfr_pthreads2.pgm", buffer, largura, altura) != 0) {
+        free(buffer);
+        return 1;
+    }
+
     FILE *t = fopen("times.txt", "w");
     if (t == NULL) {
         fprintf(stderr, "Erro: falha ao criar arquivo de saida times.txt\n");
@@ -54,7 +75,7 @@ int main(int argc, char **argv) {
         return 1;
     }
 
-    fprintf(t, "serial %.9f\nopenmp %.9f\n", tempo_serial, tempo_openmp);
+    fprintf(t, "serial %.9f\nopenmp %.9f\npthreads1 %.9f\npthreads2 %.9f\n", tempo_serial, tempo_openmp, tempo_pthreads1, tempo_pthreads2);
 
     if (fclose(t) != 0) {
         fprintf(stderr, "Erro: falha ao fechar times.txt\n");
@@ -164,4 +185,85 @@ void calcularOpenMP(unsigned char *buffer, long largura, long altura, long max_i
             buffer[i * largura + j] = intensidade;
         }
     }
+}
+
+int calcularPthreads1(unsigned char *buffer, long largura, long altura, long max_iteracoes, long num_threads) {
+    pthread_t threads[num_threads];
+    Thread args[num_threads];
+
+    for (long i = 0; i < num_threads; i++) {
+        args[i].buffer = buffer;
+        args[i].largura = largura;
+        args[i].altura = altura;
+        args[i].max_iteracoes = max_iteracoes;
+        args[i].num_threads = num_threads;
+        args[i].id = i;
+
+        if (pthread_create(&threads[i], NULL, rotinaBlocos, &args[i]) != 0) {
+            fprintf(stderr, "Erro: falha ao criar a thread %ld\n", i);
+            return 1;
+        }
+    }
+
+    for (long i = 0; i < num_threads; i++) {
+        if (pthread_join(threads[i], NULL) != 0) {
+            fprintf(stderr, "Erro: falha ao aguardar a thread %ld\n", i);
+            return 1;
+        }
+    }
+    return 0;
+}
+
+int calcularPthreads2(unsigned char *buffer, long largura, long altura, long max_iteracoes, long num_threads) {
+    pthread_t threads[num_threads];
+    Thread args[num_threads];
+
+    for (long i = 0; i < num_threads; i++) {
+        args[i].buffer = buffer;
+        args[i].largura = largura;
+        args[i].altura = altura;
+        args[i].max_iteracoes = max_iteracoes;
+        args[i].num_threads = num_threads;
+        args[i].id = i;
+
+        if (pthread_create(&threads[i], NULL, rotinaIntercalada, &args[i]) != 0) {
+            fprintf(stderr, "Erro: falha ao criar a thread %ld\n", i);
+            return 1;
+        }
+    }
+
+    for (long i = 0; i < num_threads; i++) {
+        if (pthread_join(threads[i], NULL) != 0) {
+            fprintf(stderr, "Erro: falha ao aguardar a thread %ld\n", i);
+            return 1;
+        }
+    }
+    return 0;
+}
+
+void* rotinaBlocos(void *arg) {
+    Thread *t = (Thread*)arg;
+    long inicio = (t->id * t->altura) / t->num_threads;
+    long fim = ((t->id + 1) * t->altura) / t->num_threads;
+    for (long i = inicio; i < fim; i++) {
+        for (long j = 0; j < t->largura; j++) {
+            double cr, ci;
+            mapearPixel((int)j, (int)i, t->largura, t->altura, &cr, &ci);
+            int iter = contarIteracoes(cr, ci, t->max_iteracoes);
+            t->buffer[i * t->largura + j] = (unsigned char)((iter * 255) / t->max_iteracoes);
+        }
+    }
+    return NULL;
+}
+
+void* rotinaIntercalada(void *arg) {   
+    Thread *t = (Thread*)arg;
+    for (long i = t->id; i < t->altura; i += t->num_threads)
+        for (long j = 0; j < t->largura; j++) {
+            double cr, ci;
+            mapearPixel((int)j, (int)i, t->largura, t->altura, &cr, &ci);
+            int iter = contarIteracoes(cr, ci, t->max_iteracoes);
+            t->buffer[i * t->largura + j] = (unsigned char)((iter * 255) / t->max_iteracoes);
+        }
+    return NULL;
 }
